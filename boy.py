@@ -125,20 +125,17 @@ class boy:
         self.state_machine = StateMachine(
             self.IDLE,
             {
-<<<<<<< HEAD
+
                 self.SLEEP: {space_down: self.IDLE},
                 self.IDLE: {space_down: self.IDLE,time_out: self.SLEEP,right_down: self.RUN,left_down: self.RUN,right_up: self.RUN,left_up: self.RUN
                 },
                 self.RUN: {space_down: self.RUN,right_up: self.IDLE,left_up: self.IDLE,right_down: self.IDLE,left_down: self.IDLE
                 }
             }
-=======
                 self.SLEEP : {space_down: self.IDLE},
                 self.IDLE : {space_down:self.IDL,Etime_out: self.SLEEP, right_down: self.RUN, left_down: self.RUN, right_up: self.RUN, left_up: self.RUN},
                 self.RUN : {space_down:self.RUN,right_up: self.IDLE, left_up: self.IDLE, right_down: self.IDLE, left_down: self.IDLE}
             } #pace_down: self.IDLE 부분 수정
->>>>>>> parent of dfc9a89 (aoRmfjqrp tnwjd \)
-        )
 
     def update(self):
         self.state_machine.update()
@@ -161,3 +158,5 @@ class boy:
         print("fire_ball")
         ball = Ball(self.x, self.y, self.face_dir)
         game_world.add_object(ball)
+
+

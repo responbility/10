@@ -25,3 +25,4 @@ define add_object(o):
                     layer.remove(o)
                     return
 
+    def
